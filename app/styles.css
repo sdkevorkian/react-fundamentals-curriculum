@@ -1,0 +1,52 @@
+@font-face{
+  font-family: Coco;
+  src: url('font/Coco.otf');
+}
+
+body {
+  font-family: Coco;
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+.main-container {
+  min-height: 100vh;
+  background-image: url('images/bkgd.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border: 2px #45163b solid;
+  border-radius: 5px;
+  background-color: #77213c;
+  color: white;
+  font-family: Helvetica;
+}

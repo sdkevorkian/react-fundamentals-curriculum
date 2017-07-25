@@ -11,7 +11,8 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      { test: /\.(png|jpg|woff|woff2|eot|ttf|svg|otf)$/, loader: 'url-loader?limit=100000' }
     ]
   },
   devServer: {
