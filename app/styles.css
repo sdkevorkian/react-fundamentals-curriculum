@@ -28,25 +28,70 @@ h1 {
   text-align: center;
 }
 
-form {
-  width: 50%;
-  margin: 0 auto;
-}
-
 input {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 button {
   padding: 10px;
-  margin: 10px;
-  width: 100%;
   border: 2px #45163b solid;
   border-radius: 5px;
   background-color: #77213c;
   color: white;
   font-family: Helvetica;
+  box-sizing: border-box;
+}
+
+.col-50{
+  width: 50%;
+}
+
+.col-100{
+  width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+nav {
+  height: 4em;
+  background-color: #431941;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  float: right;
+  margin: 10px 10px 0 0;
+}
+
+nav p{
+  font-size: 2em;
+  text-align: left;
+  display: inline;
+}
+
+nav li:first-child {
+  float: left;
+}
+
+@media (max-width: 1055px){
+    nav p {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width: 900px){
+    nav p {
+        font-size: 1em;
+    }
 }
