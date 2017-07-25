@@ -28,7 +28,9 @@
   "homepage": "https://github.com/sdkevorkian/react-fundamentals-curriculum#readme",
   "dependencies": {
     "axios": "^0.16.2",
+    "dotenv": "^4.0.0",
     "file-loader": "^0.11.2",
+    "fs": "0.0.1-security",
     "prop-types": "^15.5.10",
     "query-string": "^5.0.0",
     "react": "^15.6.1",

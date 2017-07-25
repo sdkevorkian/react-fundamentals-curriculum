@@ -1,5 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './app/index.js',
@@ -7,6 +8,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
     publicPath: '/'
+  },
+  node: {
+      fs: "empty"
   },
   module: {
     rules: [

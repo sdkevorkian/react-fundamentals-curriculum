@@ -44,6 +44,7 @@ button {
   color: white;
   font-family: Helvetica;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .col-50{
