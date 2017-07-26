@@ -17,9 +17,6 @@ h1 {
 .main-container {
   min-height: 100vh;
   background-image: url('images/bkgd.jpg');
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .home {
@@ -36,7 +33,7 @@ input {
   margin-bottom: 10px;
 }
 
-button {
+.button {
   padding: 10px;
   border: 2px #45163b solid;
   border-radius: 5px;
@@ -45,6 +42,8 @@ button {
   font-family: Helvetica;
   box-sizing: border-box;
   cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .col-50{

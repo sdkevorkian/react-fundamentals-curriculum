@@ -1,6 +1,7 @@
 var React = require('react');
 var PropTypes = require('prop-types');
 var api = require('../utils/api');
+var Link = require('react-router-dom').Link;
 
 class GetWeather extends React.Component{
     constructor(props){
@@ -9,7 +10,6 @@ class GetWeather extends React.Component{
             location: ''
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e){
@@ -21,11 +21,8 @@ class GetWeather extends React.Component{
         });
     }
 
-    handleSubmit(e){
-        api.getCurrentWeather(this.state.location).then(function(results){console.log(results)});
-    }
-
     render(){
+        var city = this.state.location;
         return(
             <div>
                 <input
@@ -36,13 +33,15 @@ class GetWeather extends React.Component{
                     value={this.state.location}
                     onChange = {this.handleChange}
                 />
-                <button
-                    className={this.props.col}
-                    type="submit"
-                    onClick = {this.handleSubmit}
+                <Link
+                    className={this.props.col + ' button'}
+                    to={{
+                        pathname: '/forecast',
+                        search: '?city=' + city
+                    }}
                 >
                     Get Weather
-                </button>
+                </Link>
             </div>
         );
     }
