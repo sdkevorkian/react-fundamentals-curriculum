@@ -9,18 +9,18 @@ class Loading extends React.Component {
         }
     }
     componentDidMount() {
-        var stopper = this.state.text + '...';
+        var stopper = this.props.text + '...';
         this.interval = window.setInterval(function(){
             if (this.state.text === stopper){
                 this.setState(function(){
                     return {
                         text: this.props.text
-                    }
-                })
+                    };
+                });
             }
             this.setState(function(prevState){
                 return {
-                    text: prevState + '.'
+                    text: prevState.text + '.'
                 };
             });
         }.bind(this), this.props.speed);
@@ -39,12 +39,12 @@ class Loading extends React.Component {
 
 Loading.PropTypes = {
     text: PropTypes.string.isRequired,
-    speed: PropTypes.string
+    speed: PropTypes.number
 }
 
 Loading.defaultProps = {
     text: 'loading',
-    speed: '300'
+    speed: 300
 }
 
 module.exports = Loading;

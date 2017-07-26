@@ -1,11 +1,13 @@
 var React = require('react');
 var PropTypes = require('prop-types');
+var helpers = require('../utils/helpers');
+var getDate = helpers.getDate;
 
 function ForecastPreview(props){
     return (
             <div className='forecast'>
                 {props.forecast.map(function(day){
-                    var d = new Date(day.dt * 1000);
+                    // var d = new Date(day.dt * 1000);
                     return (
                         <div
                         key={day.dt}
@@ -14,7 +16,7 @@ function ForecastPreview(props){
                             className="forecastPreview"
                             src={'./app/images/weather-icons/' + day.weather[0].icon + '.svg'}
                         />
-                            <h3>{d.toDateString()}</h3>
+                            <h3>{getDate(day.dt)}</h3>
                         </div>
                     )
                 })}

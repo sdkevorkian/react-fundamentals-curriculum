@@ -45,9 +45,10 @@ class Forecast extends React.Component {
                 {this.state.loading
                     ? <Loading
                     text="Loading"
-                    speed='30'
+                    speed={300}
                     />
-                    :<div>
+                    :
+                    <div>
                         <h2>{this.city}</h2>
                         <ForecastPreview
                             forecast = {forecast.list}
