@@ -25,7 +25,7 @@ class Forecast extends React.Component {
         this.setState(function(){
             return {
                 loading: true
-            }
+            };
         });
         api.get5DayForecast(city).then((weather)=>{
             return this.setState(function(){
@@ -52,6 +52,7 @@ class Forecast extends React.Component {
                         <h2>{this.city}</h2>
                         <ForecastPreview
                             forecast = {forecast.list}
+                            city = {this.city}
                         />
                     </div>}
            </div>

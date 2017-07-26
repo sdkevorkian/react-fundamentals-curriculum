@@ -1,6 +1,5 @@
 var React = require('react');
 var PropTypes = require('prop-types');
-
 var Link = require('react-router-dom').Link;
 
 class GetWeather extends React.Component{
@@ -8,7 +7,7 @@ class GetWeather extends React.Component{
         super(props);
         this.state = {
             location: ''
-        }
+        };
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -17,7 +16,7 @@ class GetWeather extends React.Component{
         this.setState(function(){
             return {
                 location: value
-            }
+            };
         });
     }
 

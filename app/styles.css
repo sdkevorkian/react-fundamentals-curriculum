@@ -115,6 +115,10 @@ nav li:first-child {
   margin: 20px;
 }
 
+.day h3 {
+  color: white;
+}
+
 .forecast-preview{
   width: 100%;
 }

@@ -2,6 +2,7 @@ var React = require('react');
 var Home = require('./Home');
 var Nav = require('./Nav');
 var Forecast = require('./Forecast');
+var Detail = require('./Detail');
 var ReactRouter = require('react-router-dom');
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
@@ -18,6 +19,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path='/' component={Home} />
                         <Route exact path='/forecast' component={Forecast} />
+                        <Route path='/detail' component={Detail} />
                         <Route render={function(){
                             return <p>Not found</p>
                         }} />
