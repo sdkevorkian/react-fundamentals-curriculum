@@ -83,7 +83,7 @@ ul {
 
 nav li {
   float: right;
-  margin: 10px 10px 0 0;
+  margin: 25px 20px 0 0;
   font-size: 0.8em;
 }
 
@@ -100,6 +100,23 @@ nav a {
 
 nav li:first-child {
   float: left;
+}
+
+.forecast{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4em;
+}
+
+.day {
+  width: 15%;
+  text-align: center;
+  margin: 20px;
+}
+
+.forecast-preview{
+  width: 100%;
 }
 
 @media (max-width: 1055px){
