@@ -8,6 +8,7 @@ function ForecastPreview(props){
     return (
             <div className='forecast'>
                 {props.forecast.map(function(day){
+                    day.city = props.city;
                     return (
                         <div
                             key={day.dt}
@@ -15,7 +16,7 @@ function ForecastPreview(props){
                             <Link
                             to={{
                                 pathname: '/detail/' + props.city,
-                                search: '?day=' + day.dt
+                                state: day
                             }}>
                                 <img
                                     className="forecastPreview"
