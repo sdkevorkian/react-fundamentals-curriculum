@@ -1,5 +1,6 @@
 var React = require('react');
 var GetWeather = require('./GetWeather');
+var Link = require('react-router-dom').Link;
 
 class Nav extends React.Component{
   render(){
@@ -7,10 +8,8 @@ class Nav extends React.Component{
       <nav>
         <ul>
           <li>
-            <p
-              className="nav-title"
-            >
-              React to the Weather
+            <p>
+              <Link to='/'> React to the Weather</Link>
             </p>
           </li>
           <li>

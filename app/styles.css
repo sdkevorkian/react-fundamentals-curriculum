@@ -7,16 +7,29 @@ body {
   font-family: Coco;
   color: white;
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+p {
+  font-family: Helvetica;
 }
 
 h1 {
   font-size: 5em;
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .main-container {
   min-height: 100vh;
   background-image: url('images/bkgd.jpg');
+}
+
+.container {
+  margin: 20px;
 }
 
 .home {
@@ -42,8 +55,7 @@ input {
   font-family: Helvetica;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
+
 }
 
 .col-50{
@@ -72,12 +84,18 @@ ul {
 nav li {
   float: right;
   margin: 10px 10px 0 0;
+  font-size: 0.8em;
 }
 
 nav p{
   font-size: 2em;
   text-align: left;
   display: inline;
+  font-family: Coco;
+}
+
+nav a {
+    color: white;
 }
 
 nav li:first-child {

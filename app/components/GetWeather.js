@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = require('prop-types');
-var api = require('../utils/api');
+
 var Link = require('react-router-dom').Link;
 
 class GetWeather extends React.Component{
